@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Roboto LT", sans-serif;
+  color: #333;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3333;
+  height: 4rem;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.navbar .nav-left img {
+  width: 4rem;
+}
+
+.navbar .nav-middle ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar .nav-middle ul li {
+  margin: 0 12px 0 0;
+}
+.navbar .nav-right ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar .nav-right ul li {
+  margin: 0 12px 0 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.signup {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.signup {
+  display: flex;
+  position: absolute;
+  /* align-items: center; */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.signup .tone-1 {
+  height: 100vh;
+  flex: 1;
+  position: relative;
+}
+.signup .tone-2 {
+  height: 100vh;
+  flex: 1;
+  /* border: 1px solid black; */
+  position: relative;
+}
+.signup .tone-1 img {
+  max-height: 100%;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.signup .tone-2 .signupCard {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  position: relative;
+  left: 7%;
+}
+
+.signupCard .appLogo {
+  /* border: 1px solid black; */
+  margin-top: 4rem;
+  color: #3751fe;
+  font-size: 1.3rem;
+}
+.signupCard .tagLine {
+  margin-top: 4rem;
+}
+.signupCard .welcomeMsg {
+  margin-top: 1rem;
+}
+.signupCard .signupForm {
+  margin-top: 3rem;
+}
+.signupCard .signupForm input {
+  width: 500px;
+}
+.signupBtn {
+  height: 2.2rem;
+  width: 6rem;
+  border: none;
+  background-color: #3751fe;
+  color: white;
+  transition: all 0.5s;
+}
+
+.signupBtn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #3751fe;
+  border: 1px solid #3751fe;
+}
+.LoginBtn {
+  height: 2.2rem;
+  width: 6rem;
+  border: none;
+  background-color: transparent;
+  color: #3751fe;
+  border: 1px solid #3751fe;
+  transition: all 0.5s;
+}
+.LoginBtn:hover {
+  cursor: pointer;
+  background-color: #3751fe;
+  color: white;
+  border: none;
+}

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { auth, db } from "../Firebase/firebase";
+import auth_img from "../../Assets/images/auth_img_2.svg";
+import logo from "../../Assets/images/logo.png";
+import TextField from "@material-ui/core/TextField";
 
 class SignUp extends Component {
   state = {
@@ -27,39 +30,68 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div>
-        <h2>Signup</h2>
-        <form>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="email"
-            value={this.state.email}
-            placeholder="Email"
-          />
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="fullname"
-            value={this.state.fullname}
-            placeholder="fullname"
-          />
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="username"
-            value={this.state.username}
-            placeholder="username"
-          />
-          <input
-            onChange={this.handleChange}
-            type="password"
-            name="password"
-            value={this.state.password}
-            placeholder="password"
-          />
-          <button onClick={this.handleSignup}>Sign up</button>
-        </form>
+      <div className="signup">
+        <div className="tone-1">
+          <img src={auth_img} alt="socialize" />
+        </div>
+        <div className="tone-2">
+          <div className="signupCard">
+            <h4 className="appLogo">
+              social<b>Connection</b>
+            </h4>
+
+            <h2 className="tagLine">Here We Do Connect.</h2>
+
+            <p className="welcomeMsg">
+              Welcome Back, Please Login To your Account
+            </p>
+            <form className="signupForm">
+              {/* <input
+                onChange={this.handleChange}
+                type="text"
+                name="email"
+                value={this.state.email}
+                placeholder="Email"
+              /> */}
+              <TextField
+                id="outlined-full-width"
+                label="Email"
+                variant="outlined"
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-full-width"
+                label="Fullname"
+                variant="outlined"
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-full-width"
+                label="Username"
+                variant="outlined"
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-full-width"
+                label="Password"
+                variant="outlined"
+                type="password"
+              />
+              <br />
+              <br />
+
+              <button className="signupBtn" onClick={this.handleSignup}>
+                Sign up
+              </button>
+              <button className="LoginBtn" onClick={this.handleSignup}>
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }
