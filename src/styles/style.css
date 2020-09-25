@@ -40,12 +40,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.signup {
+.auth {
   height: 100vh;
   background-color: #fafafa;
 }
 
-.signup {
+.auth {
   display: flex;
   position: absolute;
   /* align-items: center; */
@@ -56,18 +56,18 @@ a {
   z-index: 2;
 }
 
-.signup .tone-1 {
+.auth .tone-1 {
   height: 100vh;
   flex: 1;
   position: relative;
 }
-.signup .tone-2 {
+.auth .tone-2 {
   height: 100vh;
   flex: 1;
   /* border: 1px solid black; */
   position: relative;
 }
-.signup .tone-1 img {
+.auth .tone-1 img {
   max-height: 100%;
   max-width: 90%;
   width: auto;
@@ -79,7 +79,7 @@ a {
   right: 0;
   margin: auto;
 }
-.signup .tone-2 .signupCard {
+.auth .tone-2 .authCard {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -87,27 +87,27 @@ a {
   left: 7%;
 }
 
-.signupCard .appLogo {
+.authCard .appLogo {
   /* border: 1px solid black; */
   margin-top: 4rem;
   color: #3751fe;
   font-size: 1.3rem;
 }
-.signupCard .tagLine {
+.authCard .tagLine {
   margin-top: 4rem;
   font-weight: 400;
 }
-.signupCard .welcomeMsg {
+.authCard .welcomeMsg {
   margin-top: 1rem;
   font-weight: 200;
 }
-.signupCard .signupForm {
+.authCard .authForm {
   margin-top: 3rem;
 }
-.signupCard .signupForm input {
+.authCard .authForm input {
   width: 500px;
 }
-.signupBtn {
+.filled-button {
   height: 2.2rem;
   width: 6rem;
   border: none;
@@ -116,13 +116,13 @@ a {
   transition: all 0.5s;
 }
 
-.signupBtn:hover {
+.filled-button:hover {
   cursor: pointer;
   background-color: transparent;
   color: #3751fe;
   border: 1px solid #3751fe;
 }
-.LoginBtn {
+.outlined-button {
   height: 2.2rem;
   width: 6rem;
   border: none;
@@ -131,7 +131,7 @@ a {
   border: 1px solid #3751fe;
   transition: all 0.5s;
 }
-.LoginBtn:hover {
+.outlined-button:hover {
   cursor: pointer;
   background-color: #3751fe;
   color: white;
