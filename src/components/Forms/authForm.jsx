@@ -2,9 +2,43 @@ import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import { auth, db } from "../Firebase/firebase";
 import auth_img from "../../Assets/images/auth_img_2.svg";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class AuthForm extends Component {
+  state = {
+    email: "",
+    fullname: "",
+    username: "",
+    password: "",
+  };
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+  handleSignup = (e) => {
+    e.preventDefault();
+    return auth
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
+      .then((res) => {
+        console.log("User created!");
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("Error: " + err);
+      });
+  };
+
+  handleSigin = (e) => {
+    e.preventDefault();
+
+    return auth
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then((res) => {
+        this.props.history.push("/home");
+      });
+  };
+
   handleForms = (page, welcomeMessage) => {
     if (page === "signup") {
       return (
@@ -21,6 +55,9 @@ class AuthForm extends Component {
               id="outlined-full-width"
               label="Email"
               variant="outlined"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
             />
             <br />
             <br />
@@ -28,6 +65,9 @@ class AuthForm extends Component {
               id="outlined-full-width"
               label="Fullname"
               variant="outlined"
+              name="fullname"
+              value={this.state.fullname}
+              onChange={this.handleChange}
             />
             <br />
             <br />
@@ -35,6 +75,9 @@ class AuthForm extends Component {
               id="outlined-full-width"
               label="Username"
               variant="outlined"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleChange}
             />
             <br />
             <br />
@@ -43,6 +86,9 @@ class AuthForm extends Component {
               label="Password"
               variant="outlined"
               type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
             />
             <br />
             <br />
@@ -51,9 +97,7 @@ class AuthForm extends Component {
             </button>
             &nbsp;&nbsp;
             <Link to="/signin">
-              <button className="outlined-button" onClick={this.handleSignup}>
-                Login
-              </button>
+              <button className="outlined-button">Login</button>
             </Link>
           </form>
         </div>
@@ -73,6 +117,9 @@ class AuthForm extends Component {
               id="outlined-full-width"
               label="Email"
               variant="outlined"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
             />
             <br />
             <br />
@@ -81,23 +128,25 @@ class AuthForm extends Component {
               label="Password"
               variant="outlined"
               type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
             />
             <br />
             <br />
-            <button className="filled-button" onClick={this.handleSignup}>
+            <button className="filled-button" onClick={this.handleSigin}>
               Login
             </button>
             &nbsp;&nbsp;
             <Link to="/signup">
-              <button className="outlined-button" onClick={this.handleSignup}>
-                Sign up
-              </button>
+              <button className="outlined-button">Sign up</button>
             </Link>
           </form>
         </div>
       );
     }
   };
+
   render() {
     const welcomeMessage =
       this.props.page === "signup"
@@ -116,4 +165,4 @@ class AuthForm extends Component {
   }
 }
 
-export default AuthForm;
+export default withRouter(AuthForm);
