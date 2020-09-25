@@ -95,9 +95,11 @@ a {
 }
 .signupCard .tagLine {
   margin-top: 4rem;
+  font-weight: 400;
 }
 .signupCard .welcomeMsg {
   margin-top: 1rem;
+  font-weight: 200;
 }
 .signupCard .signupForm {
   margin-top: 3rem;

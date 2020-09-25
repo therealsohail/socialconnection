@@ -46,13 +46,6 @@ class SignUp extends Component {
               Welcome Back, Please Login To your Account
             </p>
             <form className="signupForm">
-              {/* <input
-                onChange={this.handleChange}
-                type="text"
-                name="email"
-                value={this.state.email}
-                placeholder="Email"
-              /> */}
               <TextField
                 id="outlined-full-width"
                 label="Email"
@@ -82,10 +75,10 @@ class SignUp extends Component {
               />
               <br />
               <br />
-
               <button className="signupBtn" onClick={this.handleSignup}>
                 Sign up
               </button>
+              &nbsp;&nbsp;
               <button className="LoginBtn" onClick={this.handleSignup}>
                 Login
               </button>
