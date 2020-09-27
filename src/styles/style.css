@@ -6,6 +6,7 @@ html {
   font-family: "Roboto LT", sans-serif;
   color: #333;
 }
+/* Navbar started */
 .navbar {
   position: relative;
   display: flex;
@@ -18,28 +19,71 @@ html {
   background-color: #ffffff;
   z-index: 1;
 }
+.navbar .nav-left {
+  position: relative;
+  left: 20px;
+}
 .navbar .nav-left img {
   width: 4rem;
 }
 
-.navbar .nav-middle ul {
+.navbar .nav-middle {
   display: flex;
-  list-style-type: none;
 }
-.navbar .nav-middle ul li {
-  margin: 0 12px 0 0;
+/* .navbar .nav-middle ul li {
+  margin: 0 20px 0 0;
+}  */
+.navbar .nav-middle .searchTxtBox {
+  width: 400px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  padding-left: 3px;
 }
+.navbar .nav-middle .searchBtn {
+  width: 60px;
+  height: 32px;
+  border: 1px solid #cccccc;
+  background: transparent;
+  background-color: #f1f1f1;
+  color: #3f3f3f;
+  transition: all 0.5s;
+}
+.navbar .nav-middle .searchBtn:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .navbar .nav-right ul {
   display: flex;
+  position: relative;
   list-style-type: none;
+  align-items: center;
+  right: 20px;
 }
 .navbar .nav-right ul li {
   margin: 0 12px 0 0;
+}
+.navbar .nav-right ul .Profile img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid #55adef;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
+.nav-icons {
+  color: #3751fe;
+  font-size: 40px;
+}
+.activate {
+  /* background-color: grey; */
+  color: #55adef;
+}
+
+/* Navbar ended */
 .auth {
   height: 100vh;
   background-color: #fafafa;

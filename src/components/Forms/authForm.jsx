@@ -52,11 +52,13 @@ class AuthForm extends Component {
           <p className="welcomeMsg">{welcomeMessage}</p>
           <form className="authForm">
             <TextField
+              // error
               id="outlined-full-width"
               label="Email"
               variant="outlined"
               name="email"
               value={this.state.email}
+              helperText=""
               onChange={this.handleChange}
             />
             <br />
